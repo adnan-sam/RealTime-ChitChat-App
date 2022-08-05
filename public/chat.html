@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+      integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+      crossorigin="anonymous"
+    />
+    <title>ChitChat by Adnan</title>
+    <!-- Bootstrap modules -->
+    <!-- CSS only -->
+	  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sign-in/">
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="images/chat_logo.png" type="image/x-icon">
+  </head>
+  <body>
+    <div class="super-container">
+        <header class="chat-header">
+          <h1><img class="logo_chat" src="./images/chat_logo.png" alt="Chat Logo"> ChitChat <h6 class="developer">by Adnan</h6></h1>
+          <a id="leave-btn" class="btn btn-danger">Leave Room</a>
+        </header>
+        <main class="chat-main">
+          <div class="chat-sidebar">
+            <div class="room-no">
+              <h4><i class="room-sp fas fa-comments"></i> Room Name :</h3>
+                <h2 id="room-name"></h2>
+            </div>
+            <div class="users-active">
+              <h4><i class="room-sp fas fa-users"></i> Active Users</h3>
+                <div class="active-people">
+                  <ul id="users"><span class="logged-in">●</span></ul>
+                </div>
+            </div>
+          </div>
+          <!-- Showing messages section -->
+          <div class="sub-container">
+            <div class="message-container">
+              <div class="chat-messages"></div>
+            </div>
+          </div>
+        </main>
+        <div class="chat-form-container">
+          <form id="chat-form">
+            <input
+              id="msg"
+              type="text"
+              placeholder="Type a message here.."
+              required
+              autocomplete="off"
+            />
+            <button class="btn btn-success"><i class="fas fa-paper-plane"></i> Send</button>
+          </form>
+        </div>
+    </div> 
+    
+<!--Left Side Buttons Start-->	
+      <div class="sticky-left-container">
+        <ul class="sticky-left">
+          <li>
+            <img width="32" height="32" title="" alt="" src="https://drive.google.com/uc?id=1yz1jMRdqLQWBx10eFLSWTMGWmKrL9sM6"/> <a href="www.google.com"></a>
+            <p>Phone</p>
+          </li>
+          <li>
+            <img width="32" height="32" title="" alt="" src="https://drive.google.com/uc?id=1ha6UAQlGBFXnExIXUMgs2l1QwUNgE09K" />
+            <p>Whatsapp</p>
+          </li>
+          <li>
+            <img width="32" height="32" title="" alt="" src="https://drive.google.com/uc?id=1Jthmdc-CZpBoymeHEW06x9OTj8_lW7gM" />
+            <p>Email</p>
+        </li>
+      </ul>
+    </div>
+<!--Left Side Buttons End-->
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js"
+      integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
