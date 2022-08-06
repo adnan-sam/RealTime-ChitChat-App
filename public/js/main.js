@@ -124,18 +124,21 @@ function outputUsers(users) {
     userList.appendChild(li);
   });
 }
+//Options panel show up for mobile phone
+document.getElementById('opt-btn').addEventListener('click', () => {
+  alert("Show up");
+});
 
 //Prompt the user before leave chat room
 document.getElementById('leave-btn').addEventListener('click', () => {
   const leaveRoom = confirm('Are you sure you want to leave the chatroom?');
   if (leaveRoom) {
     window.location = '../index.html';
-    return;
   } else {
   }
 });
 
 //Promt the user when he/she refreshes the page
-window.onbeforeunload = function() {
-  return "Data will be lost if you leave the page, are you sure?";
-};
+// window.onbeforeunload = function() {
+//   return "Data will be lost if you leave the page, are you sure?";
+// };
