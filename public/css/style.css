@@ -132,7 +132,7 @@ a {
 
 .chat-messages {
 	padding: 30px;
-	max-height: 500px;
+	max-height: 70vh;
 	overflow-y: scroll;
 }
 .chat-messages::-webkit-scrollbar {
@@ -170,10 +170,12 @@ a {
 	width: flex;
 	margin-left: 0;
 	border-radius: 0 0 20px 20px;
+	z-index: +1;
 }
 
 .chat-form-container form {
 	display: flex;
+	z-index: +1;
 }
 #msg{
 	border-radius: 30px !important;
