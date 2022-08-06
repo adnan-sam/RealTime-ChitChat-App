@@ -322,13 +322,15 @@ body {
 		border-radius: 0;
 	}
 	.chat-messages {
-		max-height: 90vh !important;
+		max-height: 87vh !important;
 	}
 	.message-container, .sub-container {
 		background: none;
 		border-radius: 0;
 		width: 100vw;
 		height: 90vh;
+		float: none;
+		margin-bottom: 20px !important;
 		padding: 0 20px;
 	}
 	.sub-container {
@@ -350,6 +352,7 @@ body {
 		border-radius: 0;
 		margin: 0;
 		width: 100vw;
+		z-index: +1;
 	}
 	#msg {
 		margin: auto !important;
