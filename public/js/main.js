@@ -124,10 +124,6 @@ function outputUsers(users) {
     userList.appendChild(li);
   });
 }
-//Options panel show up for mobile phone
-document.getElementById('opt-btn').addEventListener('click', () => {
-  alert("Show up");
-});
 
 //Prompt the user before leave chat room
 document.getElementById('leave-btn').addEventListener('click', () => {
@@ -137,8 +133,34 @@ document.getElementById('leave-btn').addEventListener('click', () => {
   } else {
   }
 });
+document.getElementById('leave-btn-2').addEventListener('click', () => {
+  const leaveRoom = confirm('Are you sure you want to leave the chatroom?');
+  if (leaveRoom) {
+    window.location = '../index.html';
+  } else {
+  }
+});
+
+/* For Mobile View navigation bar drop down */
+var a;
+function show_hide() {
+  if(a==1)
+  {
+    document.getElementById("option-active").style.display="none";
+    document.getElementById("leave-btn-2").style.display="none";
+    document.getElementById("social-icons").style.display="none";
+    return a=0;
+  }
+  else
+  {
+    document.getElementById("option-active").style.display="inline";
+    document.getElementById("leave-btn-2").style.display="inline";
+    document.getElementById("social-icons").style.display="inline";
+    return a=1;
+  }
+}
 
 //Promt the user when he/she refreshes the page
-// window.onbeforeunload = function() {
-//   return "Data will be lost if you leave the page, are you sure?";
-// };
+window.onbeforeunload = function() {
+  return "Data will be lost if you leave the page, are you sure?";
+};

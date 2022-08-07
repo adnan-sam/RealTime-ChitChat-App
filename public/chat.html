@@ -16,10 +16,21 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sign-in/">
     <!-- Bootstrap core CSS -->
     <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom Stylesheets -->
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/navigation.css">
+    <!-- Logo -->
     <link rel="shortcut icon" href="images/chat_logo.png" type="image/x-icon">
   </head>
   <body>
+    <nav id="navigation-bar">
+      <div style="display:flex;">
+          <img class="logo" src="./images/chat_logo.png" alt="ChitChat Logo">
+          <h1> ChitChat</h1><p class="developer">by Adnan</p>
+      <button onclick="show_hide()" class="btn btn-success dropdown-toggle showhidebtn"></button>
+      </div>
+    </nav>
+
     <div class="super-container">
         <header class="chat-header">
           <h1><img class="logo_chat" id="logo-head" src="./images/chat_logo.png" alt="Chat Logo"> ChitChat <h6 class="developer">by Adnan</h6></h1>
@@ -27,21 +38,22 @@
           <a id="leave-btn" class="btn btn-danger">Leave Room</a>
         </header>
         <main class="chat-main">
-          <div class="chat-sidebar">
-            <div class="room-no">
+          <div id="option-active" class="chat-sidebar">
+            <div id="room-div" class="room-no">
               <h4><i class="room-sp fas fa-comments"></i> Room Name :</h3>
                 <h2 id="room-name"></h2>
             </div>
-            <div class="users-active">
+            <div id="users-div" class="users-active">
               <h4><i class="room-sp fas fa-users"></i> Active Users</h3>
                 <div class="active-people">
                   <ul id="users"><span class="logged-in">●</span></ul>
                 </div>
             </div>
+            <a id="leave-btn-2" class="btn btn-danger">Leave Room</a>
           </div>
           <!-- Showing messages section -->
-          <div class="sub-container">
-            <div class="message-container">
+          <div id="message-container-id" class="sub-container">
+            <div id="message-container-id" class="message-container">
               <div class="chat-messages"></div>
             </div>
           </div>
@@ -62,7 +74,7 @@
     </div> 
     
 <!--Left Side Buttons Start-->	
-<div class="mf-social-side-list">
+<div id="social-icons" class="mf-social-side-list">
   <ul>
   <li>
     <a href="https://www.linkedin.com/in/adnan-sameer-199ba1223/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
