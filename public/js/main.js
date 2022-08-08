@@ -2,6 +2,7 @@ const chatForm = document.getElementById('chat-form');
 const chatMessages = document.querySelector('.chat-messages');
 const roomName = document.getElementById('room-name');
 const userList = document.getElementById('users');
+var audio = new Audio("./audiofiles/sms_ting.mp3");
 
 // const roomNo = sessionStorage.getItem('NAME');
 
@@ -32,7 +33,6 @@ socket.on('messageYou', (message) => {
 socket.on('message', (message) => {
   console.log(message);
   outputMessage(message);
-
   // Scroll down
   chatMessages.scrollTop = chatMessages.scrollHeight;
 });
@@ -68,6 +68,7 @@ chatForm.addEventListener('submit', (e) => {
 
 // Output message to DOM
 function outputMessage(message) {
+  audio.play();
   const div = document.createElement('div');
   div.classList.add('message');
   const p = document.createElement('p');
