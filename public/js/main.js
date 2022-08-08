@@ -165,5 +165,5 @@ function show_hide() {
 
 //Promt the user when he/she refreshes the page
 window.onbeforeunload = function() {
-  return "Data will be lost if you leave the page, are you sure?";
-};
+  return "Data will not be saved!! Are you sure?";
+}
