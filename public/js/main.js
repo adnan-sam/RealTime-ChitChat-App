@@ -3,6 +3,7 @@ const chatMessages = document.querySelector('.chat-messages');
 const roomName = document.getElementById('room-name');
 const userList = document.getElementById('users');
 var audio = new Audio("./audiofiles/sms_ting.mp3");
+var audio2 = new Audio("./audiofiles/join_ting.mp3");
 
 // const roomNo = sessionStorage.getItem('NAME');
 
@@ -101,6 +102,7 @@ function outputMessageYou(message) {
 }
 //For user joining and exiting output message  (From Adnan Edits)
 function outputMessageJoin(message) {
+  audio2.play();
   const div = document.createElement('div');
   div.classList.add('divJoin');
   const para = document.createElement('p');
